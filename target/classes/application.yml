@@ -1,0 +1,15 @@
+config:
+  aws:
+    region: us-east-1
+    dynamodb:
+      url: http://127.0.0.1:4566
+      access-key: localstack
+      secret-key: localstack
+server:
+  port: 9500
+spring:
+  application:
+    name: ecom-product-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
