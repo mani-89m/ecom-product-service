@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack
+    environment:
+      - DEBUG=1
+      - USE_SSL=0
+      - AWS_CBOR_DISABLE=1
+      - HOSTNAME=localstack
+      - SERVICES=dynamodb,s3,sqs
+      - AWS_DEFAULT_REGION=us-east-1
+    ports:
+      - '4566:4566'
+    volumes:
+      - ./localstack_data:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+

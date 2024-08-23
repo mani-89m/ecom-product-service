@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "d3f15132-28f7-4800-81e1-5e372025e309",
+		"name": "ecom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37800116"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"TestProduct1\",\r\n    \"description\": \"TestDesc1\",\r\n    \"price\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"TestProduct2\",\r\n    \"description\": \"TestDesc2\",\r\n    \"price\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"TestProduct3\",\r\n    \"description\": \"TestDesc3\",\r\n    \"price\": 150\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"TestDesc2\",\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"04d34982-42e7-4313-939f-9af93920c28e\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": \"5ffee45a-17a6-40a5-961d-d357dd88efdb\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9600/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9600",
+					"path": [
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9600/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9600",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/product/f0a4517e-d254-4217-bd70-20cfc4ea16d5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"product",
+						"f0a4517e-d254-4217-bd70-20cfc4ea16d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9600/order/652beb6e-33b8-494c-851e-cb4f31f15dcf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9600",
+					"path": [
+						"order",
+						"652beb6e-33b8-494c-851e-cb4f31f15dcf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get requested products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    \"f0a4517e-d254-4217-bd70-20cfc4ea16d5\",\r\n    \"650b80a9-b830-4f55-a5ba-eca3ae3b1564\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
