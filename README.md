@@ -1,1 +1,1 @@
-# ecom-product-service
+# ecom-product-service - manages product information
